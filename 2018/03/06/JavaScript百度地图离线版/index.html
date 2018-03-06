@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      JavaScript百度地图离线版 | 吃不胖的茶叶蛋 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Slim teaegg">
+    
+    
+
+    <meta name="description" content="离线版的制作参考博文百度地图2.0离线版的制作 。其实并不需要按博文的步骤操作，作者在最后一步给出了示例代码,下载示例代码，打开demo,放大地图，会发现没有内容，因为缺少相应的瓦片。 瓦片的存储格式是: z/x/y.png。 z:缩放级别  x和y不解释了,可以理解为坐标点了，其实不是。 因为缺少离线瓦片，所以需要下载瓦片tiles目录。 瓦片的下载作者于忠达还有另一篇博文百度地图2.0瓦片地址">
+<meta name="keywords" content="百度地图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript百度地图离线版 | 吃不胖的茶叶蛋">
+<meta property="og:url" content="http://yoursite.com/2018/03/06/JavaScript百度地图离线版/index.html">
+<meta property="og:site_name" content="吃不胖的茶叶蛋">
+<meta property="og:description" content="离线版的制作参考博文百度地图2.0离线版的制作 。其实并不需要按博文的步骤操作，作者在最后一步给出了示例代码,下载示例代码，打开demo,放大地图，会发现没有内容，因为缺少相应的瓦片。 瓦片的存储格式是: z/x/y.png。 z:缩放级别  x和y不解释了,可以理解为坐标点了，其实不是。 因为缺少离线瓦片，所以需要下载瓦片tiles目录。 瓦片的下载作者于忠达还有另一篇博文百度地图2.0瓦片地址">
+<meta property="og:image" content="http://yoursite.com/images/百度地图瓦片获取.png">
+<meta property="og:updated_time" content="2018-03-06T02:28:40.181Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript百度地图离线版 | 吃不胖的茶叶蛋">
+<meta name="twitter:description" content="离线版的制作参考博文百度地图2.0离线版的制作 。其实并不需要按博文的步骤操作，作者在最后一步给出了示例代码,下载示例代码，打开demo,放大地图，会发现没有内容，因为缺少相应的瓦片。 瓦片的存储格式是: z/x/y.png。 z:缩放级别  x和y不解释了,可以理解为坐标点了，其实不是。 因为缺少离线瓦片，所以需要下载瓦片tiles目录。 瓦片的下载作者于忠达还有另一篇博文百度地图2.0瓦片地址">
+<meta name="twitter:image" content="http://yoursite.com/images/百度地图瓦片获取.png">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">吃不胖的茶叶蛋</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">JavaScript百度地图离线版</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-03-06" class="post-meta__date date">2018-03-06</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/百度地图/">百度地图</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/百度地图/">百度地图</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h1 id="离线版的制作"><a href="#离线版的制作" class="headerlink" title="离线版的制作"></a>离线版的制作</h1><p>参考博文<a href="https://my.oschina.net/smzd/blog/548538" target="_blank" rel="noopener">百度地图2.0离线版的制作 </a>。<br>其实并不需要按博文的步骤操作，作者在最后一步给出了<strong><a href="http://www.oschina.net/code/snippet_84328_53024" target="_blank" rel="noopener">示例代码</a></strong>,<br>下载示例代码，打开demo,放大地图，会发现没有内容，因为缺少相应的瓦片。</p>
+<p>瓦片的存储格式是: z/x/y.png。 z:缩放级别  x和y不解释了,可以理解为坐标点了，其实不是。</p>
+<p>因为缺少离线瓦片，所以需要下载瓦片tiles目录。</p>
+<h1 id="瓦片的下载"><a href="#瓦片的下载" class="headerlink" title="瓦片的下载"></a>瓦片的下载</h1><p>作者于忠达还有另一篇博文<a href="https://my.oschina.net/smzd/blog/628173" target="_blank" rel="noopener">百度地图2.0瓦片地址获取(窗口内瓦片)</a>,<br>同样也不需要跟着博文一步一步走，只需下载作者提供的<strong><a href="http://www.oschina.net/code/snippet_84328_54360" target="_blank" rel="noopener">示例代码</a></strong>,不需修改，直接打开demo运行即可。</p>
+<p>操作：随意选取一个区域滚动放大，然后点击 findtiles 按钮，就会看到相应的瓦片名称和链接。</p>
+<p><img src="/images/百度地图瓦片获取.png" alt="百度地图瓦片获取"></p>
+<p>单击<em>10/215/64.png</em>，浏览器地址栏变成了  <code>http://online4.map.bdimg.com/tile/?qt=tile&amp;x=215&amp;y=64&amp;z=10&amp;styles=pl&amp;scaler=1&amp;udt=20160202</code></p>
+<p>所以瓦片的地址格式如下：<br>    10/215/64.png—-<a href="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=215&amp;y=64&amp;z=10&amp;styles=pl&amp;scaler=1&amp;udt=20160202" target="_blank" rel="noopener">http://online4.map.bdimg.com/tile/?qt=tile&amp;x=215&amp;y=64&amp;z=10&amp;styles=pl&amp;scaler=1&amp;udt=20160202</a></p>
+<p>由于作者并没有提供瓦片的下载程序，所以我们需要自己写程序来实现。</p>
+<h1 id="瓦片下载代码-Java版"><a href="#瓦片下载代码-Java版" class="headerlink" title="瓦片下载代码(Java版)"></a>瓦片下载代码(Java版)</h1><p>参考博文<a href="http://blog.csdn.net/u012963373/article/details/75155435" target="_blank" rel="noopener">百度地图离线瓦片下载(备忘)</a></p>
+<p>我想下载整个山东省的瓦片地图，所以我需要知道每个级别所对应的x,y的范围。在这里，我省了点力，直接用上面博文作者给出的坐标范围。</p>
+<p>当然，如果你想自己获取，可以通过<a href="#瓦片的下载">瓦片的下载</a>一节中的Demo手动获取。</p>
+<p>Java示例代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.twx;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.OutputStream;</span><br><span class="line"><span class="keyword">import</span> java.net.HttpURLConnection;</span><br><span class="line"><span class="keyword">import</span> java.net.URL;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * z=9: x[95,105]y[30,35]</span></span><br><span class="line"><span class="comment"> * z=10: x[190,215]y[58,75]</span></span><br><span class="line"><span class="comment"> * z=11: x[385,420]y[120,145]</span></span><br><span class="line"><span class="comment"> * z=12: x[775,836]y[243,285]</span></span><br><span class="line"><span class="comment"> * z=13: x[1552,1671]y[492,569]</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DownLoadBaiduTile</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">            <span class="keyword">throws</span> Exception</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="comment">//这里我更改了一下URL</span></span><br><span class="line">        String link =</span><br><span class="line">                <span class="string">"http://online4.map.bdimg.com/tile/?qt=tile&amp;x=&#123;x&#125;&amp;y=&#123;y&#125;&amp;z=&#123;z&#125;&amp;styles=pl&amp;udt=20180305&amp;scaler=1"</span>;</span><br><span class="line">        <span class="keyword">int</span> z = <span class="number">8</span>;<span class="comment">//层级</span></span><br><span class="line">        <span class="keyword">int</span> xmin = <span class="number">48</span>;<span class="comment">//x最小值</span></span><br><span class="line">        <span class="keyword">int</span> xmax = <span class="number">52</span>;<span class="comment">//x最大值</span></span><br><span class="line">        <span class="keyword">int</span> ymin = <span class="number">14</span>;<span class="comment">//y最小值</span></span><br><span class="line">        <span class="keyword">int</span> ymax = <span class="number">17</span>;<span class="comment">//y最大值</span></span><br><span class="line">        <span class="keyword">int</span> c = <span class="number">0</span>;<span class="comment">//成功数</span></span><br><span class="line">        <span class="keyword">int</span> fail = <span class="number">0</span>;<span class="comment">//失败数量</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = xmin; i &lt;= xmax; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = ymin; j &lt;= ymax; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">try</span></span><br><span class="line">                &#123;</span><br><span class="line">                    URL url = <span class="keyword">new</span> URL(link.replace(<span class="string">"&#123;x&#125;"</span>, i + <span class="string">""</span>).replace(<span class="string">"&#123;y&#125;"</span>, j + <span class="string">""</span>).replace(<span class="string">"&#123;z&#125;"</span>, z + <span class="string">""</span>));</span><br><span class="line">                    HttpURLConnection conn = (HttpURLConnection)url.openConnection();</span><br><span class="line">                    conn.setConnectTimeout(<span class="number">100</span>);</span><br><span class="line">                    conn.connect();</span><br><span class="line">                    InputStream in = conn.getInputStream();</span><br><span class="line">                    File dir = <span class="keyword">new</span> File(<span class="string">"d:/mybaidumapdownload1/tiles/"</span> + z + <span class="string">"/"</span> + i);</span><br><span class="line">                    <span class="keyword">if</span> (!dir.exists())</span><br><span class="line">                    &#123;</span><br><span class="line">                        dir.mkdirs();</span><br><span class="line">                    &#125;</span><br><span class="line">                    File file = <span class="keyword">new</span> File(<span class="string">"d:/mybaidumapdownload1/tiles/"</span> + z + <span class="string">"/"</span> + i + <span class="string">"/"</span> + j + <span class="string">".png"</span>);</span><br><span class="line">                    <span class="keyword">if</span> (!file.exists())</span><br><span class="line">                    &#123;</span><br><span class="line">                        file.createNewFile();</span><br><span class="line">                    &#125;</span><br><span class="line">                    OutputStream out = <span class="keyword">new</span> FileOutputStream(file);</span><br><span class="line">                    <span class="keyword">byte</span>[] bytes = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span> * <span class="number">20</span>];</span><br><span class="line">                    <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">while</span> ((len = in.read(bytes)) != -<span class="number">1</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        out.write(bytes, <span class="number">0</span>, len);</span><br><span class="line">                    &#125;</span><br><span class="line">                    out.close();</span><br><span class="line">                    in.close();</span><br><span class="line"><span class="comment">//                    System.out.println("已成功下载:" + z + "_" + i + "_" + j + ".jpg");</span></span><br><span class="line">                    c++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">catch</span> (Exception e)</span><br><span class="line">                &#123;</span><br><span class="line">                    System.out.println(e.getMessage());</span><br><span class="line">                    fail++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"共下载:   "</span> + c + <span class="string">"   张"</span>);</span><br><span class="line">        System.out.println(<span class="string">"失败:   "</span> + fail + <span class="string">"   张"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>附注:另外还可以通过工具去下载离线瓦片，比如<strong>太乐地图</strong>。我没试过啦。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>将下载的离线瓦片拷贝到 离线版的制作(#离线版的制作)中的demo文件夹下的tiles目录即可。</p>
+<h1 id="附注"><a href="#附注" class="headerlink" title="附注"></a>附注</h1><p>上文提到的于忠达大神的两个示例demo，我已经给出了下载链接，但是为了自己或你们的方便，我放到了百度网盘上。<br>下载地址：<a href="https://pan.baidu.com/s/1gil_XNgB9qAOKxKJO_oG9Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1gil_XNgB9qAOKxKJO_oG9Q</a>  密码：8jl9</p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
