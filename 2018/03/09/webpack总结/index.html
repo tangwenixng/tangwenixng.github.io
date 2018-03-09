@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      webpack总结 | 吃不胖的茶叶蛋 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Slim teaegg">
+    
+    
+
+    <meta name="description" content="webpack是一款模块加载器兼打包工具，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。 安装 npm install webpack –save-dev  配置文件webpack的配置文件一般长这样，稍后再对每一部份做讲解。12345678910111213141516171819202122//webpack.config.js">
+<meta name="keywords" content="webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack总结 | 吃不胖的茶叶蛋">
+<meta property="og:url" content="http://yoursite.com/2018/03/09/webpack总结/index.html">
+<meta property="og:site_name" content="吃不胖的茶叶蛋">
+<meta property="og:description" content="webpack是一款模块加载器兼打包工具，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。 安装 npm install webpack –save-dev  配置文件webpack的配置文件一般长这样，稍后再对每一部份做讲解。12345678910111213141516171819202122//webpack.config.js">
+<meta property="og:updated_time" content="2018-03-09T10:04:01.643Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="webpack总结 | 吃不胖的茶叶蛋">
+<meta name="twitter:description" content="webpack是一款模块加载器兼打包工具，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。 安装 npm install webpack –save-dev  配置文件webpack的配置文件一般长这样，稍后再对每一部份做讲解。12345678910111213141516171819202122//webpack.config.js">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">吃不胖的茶叶蛋</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">webpack总结</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-03-09" class="post-meta__date date">2018-03-09</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/前端/">前端</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/webpack/">webpack</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>webpack是一款模块加载器兼打包工具，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><blockquote>
+<p>npm install webpack –save-dev</p>
+</blockquote>
+<h1 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h1><p>webpack的配置文件一般长这样，稍后再对每一部份做讲解。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//webpack.config.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: path.resolve(__dirname,<span class="string">"src/main.js"</span>),</span><br><span class="line">    output:&#123;</span><br><span class="line">       path: path.resolve(__dirname,<span class="string">"dist/js"</span>),</span><br><span class="line">       filename:<span class="string">"bundle.js"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="built_in">module</span>:&#123;</span><br><span class="line">        loaders:[&#123;</span><br><span class="line">            test:<span class="string">"/\.js$/"</span>,</span><br><span class="line">            loader:<span class="string">"babel-loader"</span>,</span><br><span class="line">            exclude: path.resolve(__dirname,<span class="string">"node_modules"</span>),</span><br><span class="line">            include:path.resolve(__dirname,<span class="string">"src"</span>),</span><br><span class="line">            query:&#123;</span><br><span class="line">                 presets:[<span class="string">"env"</span>]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>path:是nodejs自带的模块，需要引入<br><code>__dirName</code>: 当前文件(webpack.config.js)所在目录</p>
+<p>entry: 入口文件所在路径。可以是string、array或者object<br>output:输出文件所在路径及输出文件名称</p>
+<p>下面配置entry是对象(object)时的情况:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: &#123;</span><br><span class="line">        main:path.resolve(__dirname,<span class="string">"src/main.js"</span>),</span><br><span class="line">        a:path.resolve(__dirname,<span class="string">"src/a.js"</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    output:&#123;</span><br><span class="line">       path: path.resolve(__dirname,<span class="string">"dist/js"</span>),</span><br><span class="line">       filename:<span class="string">"[name].js"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="built_in">module</span>:&#123;</span><br><span class="line">        loaders:[&#123;</span><br><span class="line">            test:<span class="string">"/\.js$/"</span>,</span><br><span class="line">            loader:<span class="string">"babel-loader"</span>,</span><br><span class="line">            exclude: path.resolve(__dirname,<span class="string">"node_modules"</span>),</span><br><span class="line">            include:path.resolve(__dirname,<span class="string">"src"</span>),</span><br><span class="line">            query:&#123;</span><br><span class="line">                 presets:[<span class="string">"env"</span>]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意:我改了两个地方。第一个是在entry下，路径前加了属性(name,a);第二个是在output下的filename处,我把bundle改成了[name]–(这里name可以使用hash、chunkhash或者3者随意组合)代替。</p>
+<p>这样设置配置文件后，运行webpack命令后，会在输出目录处得到两个文件(main.js  a.js)。</p>
+<p><em>如果[name]改成[hash]或者[chunkhash],那么输出目录的文件名就是随机的了(具体是怎么样的，我也不清楚)</em></p>
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><blockquote>
+<p>webpack<br>webpack –config “config file’s path”</p>
+</blockquote>
+<p>另外，还可以通过npm命令来运行，需要先在package.json文件中的script属性下加入以下脚本：</p>
+<blockquote>
+<p>“webpack”:”webpack –progress –display-modules –colors”<br>然后运行<code>npm run webpack</code></p>
+</blockquote>
+<h1 id="loader"><a href="#loader" class="headerlink" title="loader"></a>loader</h1><p>配置文件里都有一个loaders属性，它是一个数组，可以配置多个loader。</p>
+<p>我们可以看到已经配置了一个叫<em>babel-loader</em>的东东了，babel-loader是用来转换es6语法的。</p>
+<p>使用babel-loader需要事先引入babel-loader和babel-core,所以</p>
+<blockquote>
+<p>npm install babel-loader babel-core –save-dev</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">loaders:[&#123;</span><br><span class="line">    test:&quot;/\.js$/&quot;,</span><br><span class="line">    loader:&quot;babel-loader&quot;,</span><br><span class="line">    exclude: path.resolve(__dirname,&quot;node_modules&quot;),</span><br><span class="line">    include:path.resolve(__dirname,&quot;src&quot;),</span><br><span class="line">    query:&#123;</span><br><span class="line">         presets:[&quot;env&quot;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+<p>test: 正则表达式(只处理js文件)<br>exclude:排除某些文件<br>include：包含的文件\文件夹<br>query: //TODO</p>
+<h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><p>//TODO</p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
