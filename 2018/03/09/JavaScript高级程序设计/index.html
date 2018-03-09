@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      JavaScript高级程序设计 | 吃不胖的茶叶蛋 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Slim teaegg">
+    
+    
+
+    <meta name="description" content="typeofECMAScript有5种基本类型数据：  undefined null boolean number string  另外还有一种复杂的数据类型  object  typeof就是用来检测变量的数据类型的，typeof可能会返回以下值：  undefined boolean string number object function  instanceoftypeof操作符在检测引用">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript高级程序设计 | 吃不胖的茶叶蛋">
+<meta property="og:url" content="http://yoursite.com/2018/03/09/JavaScript高级程序设计/index.html">
+<meta property="og:site_name" content="吃不胖的茶叶蛋">
+<meta property="og:description" content="typeofECMAScript有5种基本类型数据：  undefined null boolean number string  另外还有一种复杂的数据类型  object  typeof就是用来检测变量的数据类型的，typeof可能会返回以下值：  undefined boolean string number object function  instanceoftypeof操作符在检测引用">
+<meta property="og:image" content="http://yoursite.com/images/原型链.png">
+<meta property="og:updated_time" content="2018-03-09T08:55:26.835Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript高级程序设计 | 吃不胖的茶叶蛋">
+<meta name="twitter:description" content="typeofECMAScript有5种基本类型数据：  undefined null boolean number string  另外还有一种复杂的数据类型  object  typeof就是用来检测变量的数据类型的，typeof可能会返回以下值：  undefined boolean string number object function  instanceoftypeof操作符在检测引用">
+<meta name="twitter:image" content="http://yoursite.com/images/原型链.png">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">吃不胖的茶叶蛋</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">JavaScript高级程序设计</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-03-09" class="post-meta__date date">2018-03-09</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/JavaScript/">JavaScript</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/JavaScript/">JavaScript</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p>ECMAScript有5种基本类型数据：</p>
+<ul>
+<li>undefined</li>
+<li>null</li>
+<li>boolean</li>
+<li>number</li>
+<li>string</li>
+</ul>
+<p>另外还有一种复杂的数据类型</p>
+<ul>
+<li><strong>object</strong></li>
+</ul>
+<p><strong>typeof</strong>就是用来检测变量的数据类型的，typeof可能会返回以下值：</p>
+<ul>
+<li>undefined</li>
+<li>boolean</li>
+<li>string</li>
+<li>number</li>
+<li>object</li>
+<li>function</li>
+</ul>
+<h2 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h2><p>typeof操作符在检测引用类型的值时，总是会返回object，所以用处不大。</p>
+<p>instanceof用来检测对象类型的，返回值是 true | false。<br>例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">person <span class="keyword">instanceof</span> <span class="built_in">Object</span></span><br><span class="line">colors <span class="keyword">instanceof</span> <span class="built_in">Array</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p><strong>即使定义的时候只接收两个参数，但是调用时未必一定要传两个参数</strong>   </p>
+<p>原因： 参数的内部是用一个数组(arguments)来表示的。</p>
+<p><strong>没有重载</strong>：因为没有函数签名</p>
+<h2 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h2><ul>
+<li>isArray()</li>
+<li>toString() valueof()  join()</li>
+<li>push() pop()</li>
+<li>shift() unshift()</li>
+<li>sort() reverse()</li>
+<li>操作方法: slice()  splice()</li>
+<li>indexOf()</li>
+<li>迭代方法:every() filter() forEach()  map()  some()</li>
+</ul>
+<p>比较常用的几个方法:</p>
+<p>join()<br>push()<br>slice():基于当前数组中的一个或多个创建一个新数组<br>indexOf()<br>filter(function(){})<br>forEach(function(){})<br>map(function(){…  return …;} :返回一个新数组 </p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="数据属性"><a href="#数据属性" class="headerlink" title="数据属性"></a>数据属性</h3><p>[[configurable]] : 能否通过删除属性从而重新定义属性。默认为true<br>[[enumerable]] : 能否通过for-in循环返回属性。默认为true<br>[[writable]] ：能否修改属性值。默认为true<br>[[value]] : 这个属性的值。默认为undefined</p>
+<p>举例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person=&#123;</span><br><span class="line">	name:<span class="string">"Tangwenxing"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面person对象的name属性值被设置为Tangwenxing,也就是说它的[[value]]值被设置位Tangwenxing.</p>
+<p><strong>Object.defineProperty()</strong>用来修改属性的默认特性(configurable,enumerable,writable,value),它有三个参数：</p>
+<ul>
+<li>属性所在的对象</li>
+<li>属性的名字</li>
+<li>一个描述符对象</li>
+</ul>
+<p>使用方法参见如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person=&#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(person,<span class="string">"name"</span>,&#123;</span><br><span class="line">	writable:<span class="literal">false</span>,</span><br><span class="line">	value:<span class="string">"Tangwenxing"</span>,</span><br><span class="line">	configurable:<span class="literal">false</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>现在的name属性不可以被删除也不可以重新赋值了。</p>
+</blockquote>
+<h3 id="访问属性"><a href="#访问属性" class="headerlink" title="访问属性"></a>访问属性</h3><p>主要是设置getter setter方法，因为不太重要，所以不提了。</p>
+<h3 id="Object-defineProperties用法"><a href="#Object-defineProperties用法" class="headerlink" title="Object.defineProperties用法"></a>Object.defineProperties用法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person=&#123;&#125;</span><br><span class="line"><span class="built_in">Object</span>.defineProperties(person,&#123;</span><br><span class="line">	name:&#123;</span><br><span class="line">		value:<span class="string">"Tangwenxing"</span>,</span><br><span class="line">		writable:<span class="literal">false</span></span><br><span class="line">	&#125;,</span><br><span class="line">	age:&#123;</span><br><span class="line">		value:<span class="number">25</span>,</span><br><span class="line">		writable:<span class="literal">true</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Object-getOwnPropertyDescriptor用法"><a href="#Object-getOwnPropertyDescriptor用法" class="headerlink" title="Object.getOwnPropertyDescriptor用法"></a>Object.getOwnPropertyDescriptor用法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> descriptor = <span class="built_in">Object</span>.getOwnPropertyDescriptor(person,<span class="string">"name"</span>);</span><br><span class="line">alert(descriptor.writable);</span><br></pre></td></tr></table></figure>
+<h2 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h2><p><strong>每个函数都有一个prototype属性，这个属性是一个指针，指向一个对象。</strong>(这句话很重要，关键词是：函数，prototype是一个指针)<br>prototype指向原型对象。<br><strong>所有原型对象都会自动获得一个construnctor属性</strong>(这句话也很重要)</p>
+<p><img src="/images/原型链.png" alt="原型模式图解"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.name=<span class="string">"twx"</span>;</span><br><span class="line">Person.prototype.age=<span class="number">29</span>;</span><br><span class="line">Person.prototype.sayName=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person1=<span class="keyword">new</span> Person();</span><br><span class="line"><span class="keyword">var</span> person2=<span class="keyword">new</span> Person();</span><br></pre></td></tr></table></figure>
+<p>Person函数有一个prototype属性，prototype指向一个(匿名)原型对象。</p>
+<p>实例person1、person2指向Person.prototype.</p>
+<p>在实例中创建原型中的同名属性，会覆盖原型中的那个属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">接上面的程序</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">alert(person1.name); <span class="comment">//twx</span></span><br><span class="line"></span><br><span class="line">person1.name = <span class="string">"fgh"</span>;</span><br><span class="line">alert(person1.name); <span class="comment">//fgh ——-来自实例</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> person1.name;</span><br><span class="line">alert(person1.name); <span class="comment">//twx --来自原型</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="hasOwnProperty-NaN"><a href="#hasOwnProperty-NaN" class="headerlink" title="hasOwnProperty()"></a>hasOwnProperty()</h3><p>检测一个属性是存在实例中还是原型中</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">接上面的程序</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">person1.hasOwnProperty(<span class="string">"name"</span>); <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">person1.name = <span class="string">"fgh"</span>;</span><br><span class="line">person1.hasOwnProperty(<span class="string">"name"</span>); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> person1.name;</span><br><span class="line">person1.hasOwnProperty(<span class="string">"name"</span>); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<h3 id="Object-keys"><a href="#Object-keys" class="headerlink" title="Object.keys()"></a>Object.keys()</h3><p>获取对象上所有可枚举的实例属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> per1Keys = <span class="built_in">Object</span>.keys(person1);</span><br><span class="line">alert(per1Keys); <span class="comment">//name,age,sayName</span></span><br></pre></td></tr></table></figure>
+<h3 id="更简单的原型"><a href="#更简单的原型" class="headerlink" title="更简单的原型"></a>更简单的原型</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">	name:<span class="string">"twx"</span>,</span><br><span class="line">	age:<span class="number">25</span>,</span><br><span class="line">	job:<span class="string">"IT"</span>,</span><br><span class="line">	sayName:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		alert(<span class="keyword">this</span>.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>前面提到了，原型对象会自动获取一个constructor属性。但是在这里，我们完全重写了原型对象，因此constructor属性也不在是默认的(默认指向对象的构造函数)。</p>
+<p>因此可以这样写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">	<span class="keyword">constructor</span>:Person, //让它重新指向构造函数</span><br><span class="line">	name:"twx",</span><br><span class="line">	age:25,</span><br><span class="line">	job:"IT",</span><br><span class="line">	sayName:function()&#123;</span><br><span class="line">		alert(<span class="keyword">this</span>.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="原生对象-String-Array等-的原型"><a href="#原生对象-String-Array等-的原型" class="headerlink" title="原生对象(String Array等)的原型"></a>原生对象(String Array等)的原型</h3><p>定义新方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span>.prototype.startsWith=<span class="function"><span class="keyword">function</span>(<span class="params">text</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.indexOf(text) = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> message = <span class="string">"Hello World!"</span>;</span><br><span class="line">msg.startWith(<span class="string">"Hello"</span>)   <span class="comment">//true</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="组合使用构造模式和原生模式"><a href="#组合使用构造模式和原生模式" class="headerlink" title="组合使用构造模式和原生模式"></a>组合使用构造模式和原生模式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age,job</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = name;</span><br><span class="line">	<span class="keyword">this</span>.age = age;</span><br><span class="line">	<span class="keyword">this</span>.job = job;</span><br><span class="line">	<span class="keyword">this</span>.friends = [<span class="string">'shely'</span>,<span class="string">'Bob'</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">	<span class="keyword">constructor</span>:Person,</span><br><span class="line">	sayName:function()&#123;</span><br><span class="line">		alert(<span class="keyword">this</span>.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(<span class="string">"twx"</span>,<span class="number">25</span>,<span class="string">"IT"</span>);</span><br><span class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person(<span class="string">"hyc"</span>,<span class="number">27</span>,<span class="string">"SALE"</span>);</span><br><span class="line"></span><br><span class="line">person1.friends.push(<span class="string">"JLK"</span>);</span><br><span class="line">alert(person1.friends); <span class="comment">//'shely','Bob','JLK'</span></span><br><span class="line">alert(person2.friends); <span class="comment">//'shely','Bob'</span></span><br><span class="line"></span><br><span class="line">alert(person1.sayName === person2.sayName);  <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
