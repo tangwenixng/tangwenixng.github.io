@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      前端Node Express Vue | 吃不胖的茶叶蛋 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Slim teaegg">
+    
+    
+
+    <meta name="description" content="123456Q：什么是单页面富应用（SPA）和前端路由？A：1. 单页面富应用（即Single Page Web Application，以下简称SPA）应该是最近几年火起来的，尤其是在Angular 框架诞生之后，喝多SPA 的网站以及基于Electron 和Ionic 的桌面App 和移动App 层出不穷。2. SPA 的核心即是前端路由。何为路由呢？说的通俗点就是网址，比如github.co">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端Node Express Vue | 吃不胖的茶叶蛋">
+<meta property="og:url" content="http://yoursite.com/2018/03/14/前端Node Express Vue/index.html">
+<meta property="og:site_name" content="吃不胖的茶叶蛋">
+<meta property="og:description" content="123456Q：什么是单页面富应用（SPA）和前端路由？A：1. 单页面富应用（即Single Page Web Application，以下简称SPA）应该是最近几年火起来的，尤其是在Angular 框架诞生之后，喝多SPA 的网站以及基于Electron 和Ionic 的桌面App 和移动App 层出不穷。2. SPA 的核心即是前端路由。何为路由呢？说的通俗点就是网址，比如github.co">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000013243920">
+<meta property="og:updated_time" content="2018-03-14T15:27:23.274Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端Node Express Vue | 吃不胖的茶叶蛋">
+<meta name="twitter:description" content="123456Q：什么是单页面富应用（SPA）和前端路由？A：1. 单页面富应用（即Single Page Web Application，以下简称SPA）应该是最近几年火起来的，尤其是在Angular 框架诞生之后，喝多SPA 的网站以及基于Electron 和Ionic 的桌面App 和移动App 层出不穷。2. SPA 的核心即是前端路由。何为路由呢？说的通俗点就是网址，比如github.co">
+<meta name="twitter:image" content="https://segmentfault.com/img/remote/1460000013243920">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">吃不胖的茶叶蛋</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">前端Node Express Vue</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-03-14" class="post-meta__date date">2018-03-14</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/前端/">前端</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/vue/">vue</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Q：什么是单页面富应用（SPA）和前端路由？</span><br><span class="line">A：</span><br><span class="line">1. 单页面富应用（即Single Page Web Application，以下简称SPA）应该是最近几年火起来的，尤其是在Angular 框架诞生之后，喝多SPA 的网站以及基于Electron 和Ionic 的桌面App 和移动App 层出不穷。</span><br><span class="line">2. SPA 的核心即是前端路由。何为路由呢？说的通俗点就是网址，比如github.com/JobbyM/vue-learning；专业点就是每次GET 或POST 等请求，在服务端有一个专门的正则配置列表，然后匹配到具体的一条路径后，分发给不同的Controller，然后进行各种操作后，最终将html 或数据返回给前端，这就完成了一次IO。在Node.js 出现后，这种现象有了改善，就是所谓的大前端，得益于Node.js 和JavaScript 的语言特性，html 模版可以完全由前端来控制，同步或异步渲染完全由前端决定，并且由前端维护一套模块，这就是为什么在服务端使用artTemplate、React以及即将推出的Vue2.0 原因了。那说了这么多，到底怎样算是SPA 呢，其实就是在前后端分离的基础上，加上一层前端路由。</span><br><span class="line">3.前端路由，即由前端来维护一个路由规则。实现有两种，一种是利用url 的hash，就是常说的锚点（#），JS 通过hashChange 事件来监听url 的改变，IE7 及以下需要轮询；另一种就是HTML5 的History 模式，它使url 看起来像普通网站那样，以“/”分割，没有#，但页面并没有跳转，不过使用这种模式需要服务端支持，服务端在接受到所有的请求后，都指向同一个html 文件，不然会出现404。所以，SPA 只有一个html，整个完整所有的内容都在这一个html 里，通过js 来处理。</span><br><span class="line">4. 开发一个前端路由，主要考虑到页面的可插拔、页面的声明周期、内存管理等。</span><br></pre></td></tr></table></figure>
+<hr>
+<p>以下内容的原文链接 <a href="https://segmentfault.com/a/1190000011967786" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011967786</a></p>
+<p>什么是路由</p>
+<p>路由这个概念最先是后端出现的。在以前用模板引擎开发页面时，经常会看到这样</p>
+<p><a href="http://hometown.xxx.edu.cn/bbs/forum.php" target="_blank" rel="noopener">http://hometown.xxx.edu.cn/bbs/forum.php</a></p>
+<p>有时还会有带.asp或.html的路径，这就是所谓的SSR(Server Side Render)，通过服务端渲染，直接返回页面。</p>
+<hr>
+<p>有了 Ajax 后，用户交互就不用每次都刷新页面，体验带来了极大的提升。</p>
+<p>但真正让这项技术发扬光大的，(｡･∀･)ﾉﾞ还是后来的 Google Map，它的出现向人们展现了 Ajax 的真正魅力，释放了众多开发人员的想象力，让其不仅仅局限于简单的数据和页面交互，为后来异步交互体验方式的繁荣发展带来了根基。</p>
+<p>而异步交互体验的更高级版本就是 SPA（那么问个问题，异步交互最高级的体验是什么？会在文末揭晓）—— 单页应用。单页应用不仅仅是在页面交互是无刷新的，连页面跳转都是无刷新的，为了实现单页应用，所以就有了前端路由。</p>
+<h2 id="从-vue-router-来看前端路由实现原理"><a href="#从-vue-router-来看前端路由实现原理" class="headerlink" title="从 vue-router 来看前端路由实现原理"></a>从 vue-router 来看前端路由实现原理</h2><p>前端路由的实现其实很简单。</p>
+<p>本质上就是检测 url 的变化，截获 url 地址，然后解析来匹配路由规则。</p>
+<p>但是这样有人就会问：url 每次变化都会刷新页面啊？页面都刷新了，JavaScript 怎么检测和截获 url？</p>
+<p>在 2014 年之前，大家是通过 hash 来实现路由，url hash 就是类似于</p>
+<p><a href="https://segmentfault.com/a/1190000011956628#articleHeader2" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011956628#articleHeader2</a></p>
+<p>这种 #。后面 hash 值的变化，并不会导致浏览器向服务器发出请求，浏览器不发出请求，也就不会刷新页面。另外每次 hash 值的变化，还会触发 hashchange 这个事件，通过这个事件我们就可以知道 hash 值发生了哪些变化。</p>
+<p>14年后，因为HTML5标准发布。多了两个 API，pushState 和 replaceState，通过这两个 API 可以改变 url 地址且不会发送请求。同时还有 onpopstate 事件。通过这些就能用另一种方式来实现前端路由了，但原理都是跟 hash 实现相同的。用了 HTML5 的实现，单页路由的 url 就不会多出一个#，变得更加美观。但因为没有 # 号，所以当用户刷新页面之类的操作时，浏览器还是会给服务器发送请求。为了避免出现这种情况，所以这个实现需要服务器的支持，需要把所有路由都重定向到根页面。</p>
+<p><img src="https://segmentfault.com/img/remote/1460000013243920" alt="14html"></p>
+<hr>
+<h2 id="vue-router配置history模式"><a href="#vue-router配置history模式" class="headerlink" title="vue-router配置history模式"></a>vue-router配置history模式</h2><p>官方文档：<a href="https://router.vuejs.org/zh-cn/essentials/history-mode.html" target="_blank" rel="noopener">https://router.vuejs.org/zh-cn/essentials/history-mode.html</a></p>
+<p>要在router的配置中加上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  mode: &apos;history&apos;,</span><br><span class="line">  base: &apos;/hot/&apos;, //加上这一行</span><br></pre></td></tr></table></figure></p>
+<p>用浏览器打开<a href="http://www.xxx.com/hot/" target="_blank" rel="noopener">http://www.xxx.com/hot/</a></p>
+<p>　　一切运行正常，点击各种链接也能出来，但是由于我启用了history模式，我直接在浏览里访问 <a href="http://www.xxx.com/hot/item/1" target="_blank" rel="noopener">http://www.xxx.com/hot/item/1</a> 这样的url是又404了，为什么 我可以在首页通过点击进入 <a href="http://www.xxx.com/hot/item/1" target="_blank" rel="noopener">http://www.xxx.com/hot/item/1</a> 这个页面，但是直接访问又不行呢，</p>
+<p>　　因为在history 模式下，只是动态的通过js 操作window.history 来改变有浏览器地址栏里的路径，并没有发起http请求，但当你直接 在浏览器里输入这个地址的时候 就一定要先对服务器放起http请求，但是这个目标在服务器上又不存在所以就返回了404了，怎么解决呢，就是把所有的请求全部转发到<a href="http://www.xxx.com/hot/index.hmtl上就可以了" target="_blank" rel="noopener">http://www.xxx.com/hot/index.hmtl上就可以了</a>(具体部署 参考 <a href="https://segmentfault.com/q/1010000012311024" target="_blank" rel="noopener">https://segmentfault.com/q/1010000012311024</a>)</p>
+<h2 id="apache、node-js、nginx、tomcat关系？"><a href="#apache、node-js、nginx、tomcat关系？" class="headerlink" title="apache、node.js、nginx、tomcat关系？"></a>apache、node.js、nginx、tomcat关系？</h2><p>是一类东西，又不是一类东西。</p>
+<p>首先他们都能创建 Web 服务器，但是他们关注的点不一样。</p>
+<p>Tomcat 最好跟 Java 配合，Apache 通常跟 PHP 配合，但也不排除能跟 Node.js 配合反向代理。</p>
+<p>跟 Node.js 关系最好的还算是 Nginx。当然你在你的服务器上直勾勾挂个 Node.js 监听 80 端口对外也不是不可以。<strong>但是通常真正线上（个人玩具除外）的做法是，Node.js 监听本地的某个端口，然后前面挂个 Nginx 监听 80 端口反向代理到 Node.js 上</strong>。</p>
+<p>至于为什么要这么做，比如你有 3 台服务器，每个服务器上启一个 Node.js 作为集群的一个节点，然后再在前面挡一层负载均衡，反向代理到集群的 3 台服务器上。</p>
+<p>所以实际上不仅仅是 Node.js，这是一种语言无关的做法。所以他们都能拿来做 Web 服务器，只不过关注的点不一样而已——Node.js 更倾向于业务逻辑</p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

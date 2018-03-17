@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      vue-cli 引入echarts | 吃不胖的茶叶蛋 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Slim teaegg">
+    
+    
+
+    <meta name="description" content="1、 安装依赖 cnpm install echarts -S 全局引入在main.js中1234// 引入echartsimport echarts from &amp;apos;echarts&amp;apos;Vue.prototype.$echarts = echarts 局部引入在用到的vue文件中 1234567891011121314151617181920212223242526272829303">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-cli 引入echarts | 吃不胖的茶叶蛋">
+<meta property="og:url" content="http://yoursite.com/2018/03/18/vue-cli 引入echarts/index.html">
+<meta property="og:site_name" content="吃不胖的茶叶蛋">
+<meta property="og:description" content="1、 安装依赖 cnpm install echarts -S 全局引入在main.js中1234// 引入echartsimport echarts from &amp;apos;echarts&amp;apos;Vue.prototype.$echarts = echarts 局部引入在用到的vue文件中 1234567891011121314151617181920212223242526272829303">
+<meta property="og:updated_time" content="2018-03-17T17:34:29.086Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue-cli 引入echarts | 吃不胖的茶叶蛋">
+<meta name="twitter:description" content="1、 安装依赖 cnpm install echarts -S 全局引入在main.js中1234// 引入echartsimport echarts from &amp;apos;echarts&amp;apos;Vue.prototype.$echarts = echarts 局部引入在用到的vue文件中 1234567891011121314151617181920212223242526272829303">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">吃不胖的茶叶蛋</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">vue-cli 引入echarts</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-03-18" class="post-meta__date date">2018-03-18</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/vue/">vue</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/vue/">vue</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>1、 安装依赖 cnpm install echarts -S</p>
+<h2 id="全局引入"><a href="#全局引入" class="headerlink" title="全局引入"></a>全局引入</h2><p>在main.js中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 引入echarts</span><br><span class="line">import echarts from &apos;echarts&apos;</span><br><span class="line"></span><br><span class="line">Vue.prototype.$echarts = echarts</span><br></pre></td></tr></table></figure></p>
+<h2 id="局部引入"><a href="#局部引入" class="headerlink" title="局部引入"></a>局部引入</h2><p>在用到的vue文件中</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="comment">// 引入基本模板</span></span><br><span class="line"><span class="keyword">let</span> echarts = <span class="built_in">require</span>(<span class="string">'echarts/lib/echarts'</span>)</span><br><span class="line"><span class="comment">// 引入柱状图组件</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">"echarts/lib/chart/line"</span>)</span><br><span class="line"><span class="comment">// 引入提示框和title组件</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'echarts/lib/component/tooltip'</span>)</span><br><span class="line"><span class="built_in">require</span>(<span class="string">'echarts/lib/component/title'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,<span class="comment">//end data()</span></span><br><span class="line"></span><br><span class="line">  mounted()&#123;</span><br><span class="line">    <span class="keyword">this</span>.getDbData();</span><br><span class="line">    <span class="comment">// this.drawLine();</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  methods: &#123;</span><br><span class="line">    resizeCharts (echartsDom,chartBox) &#123;</span><br><span class="line">      echartsDom.style.width = <span class="built_in">window</span>.innerWidth+<span class="string">'px'</span>;</span><br><span class="line">      echartsDom.style.height = (<span class="built_in">window</span>.innerHeight<span class="number">-100</span>)+<span class="string">'px'</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">    getDbData()&#123;</span><br><span class="line">      <span class="keyword">const</span> $<span class="keyword">this</span> =<span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">this</span>.$http.get(<span class="string">'/warn/api/dashbord'</span>)</span><br><span class="line">        .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">          $<span class="keyword">this</span>.drawLine(res.data);</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    drawLine(dbData)&#123;</span><br><span class="line">      <span class="keyword">let</span> chartBox = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'charts'</span>)[<span class="number">0</span>]</span><br><span class="line">      <span class="keyword">let</span> echartsDom = <span class="built_in">document</span>.getElementById(<span class="string">'echarts'</span>)</span><br><span class="line"></span><br><span class="line">      <span class="keyword">this</span>.resizeCharts(echartsDom,chartBox);</span><br><span class="line">      <span class="comment">// 基于准备好的dom，初始化echarts实例</span></span><br><span class="line">      <span class="keyword">let</span> myChart = echarts.init(echartsDom); <span class="comment">//若是全局引入，这里使用this.$echarts.init(echartsDom)</span></span><br><span class="line">      <span class="comment">// 绘制图表</span></span><br><span class="line">      myChart.setOption(&#123;</span><br><span class="line">          title: &#123;</span><br><span class="line">             left: <span class="string">'left'</span>,</span><br><span class="line">             text: <span class="string">'监控预警统计'</span></span><br><span class="line">            &#125;,</span><br><span class="line">          tooltip: &#123;&#125;,</span><br><span class="line">          xAxis: &#123;</span><br><span class="line">              data: dbData.data.Doing.date</span><br><span class="line">          &#125;,</span><br><span class="line">          yAxis: &#123;&#125;,</span><br><span class="line">          series: [&#123;</span><br><span class="line">              name: <span class="string">'预警提示'</span>,</span><br><span class="line">              type: <span class="string">'line'</span>,</span><br><span class="line">              data: dbData.data.Doing.value</span><br><span class="line">          &#125;,&#123;</span><br><span class="line">            name: <span class="string">'预警待办'</span>,</span><br><span class="line">            type: <span class="string">'line'</span>,</span><br><span class="line">            data: dbData.data.Reading.value</span><br><span class="line">          &#125;]</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;<span class="comment">//end methods</span></span><br><span class="line">&#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
